@@ -5,8 +5,8 @@
   tasks:
     - name: file creation
       file:
-        path: "{{ item }}"
-        state: touch
+        path: "{{ item | default(5) }}"
+        state: present
         loop:
         - file3.txt
         - file4.txt
