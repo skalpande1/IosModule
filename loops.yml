@@ -1,0 +1,16 @@
+---
+- name: loops example playbook
+  hosts: webserver
+  become: yes
+  tasks:
+    - name: file creation
+      file:
+        path: "{{ item }}"
+        state: touch
+        loop:
+        - file3.txt
+        - file4.txt
+    # - name: delete multiple files from location
+    #   file:
+    #     path:
+    #   state: absent
