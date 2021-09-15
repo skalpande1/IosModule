@@ -3,6 +3,9 @@
   hosts: webserver
   become: yes
   tasks:
+    - name: jst for check
+      debug:
+        msg: "hello"
     - name: run show version on remote devices
       ios_command:
         commands: show version
