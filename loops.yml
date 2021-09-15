@@ -7,7 +7,7 @@
       digital_ocean:
         name: "{{ item }}"
         state: present
-        loop:
+      loop:
         - file3.txt
         - file4.txt
     # - name: delete multiple files from location
