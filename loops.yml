@@ -6,7 +6,7 @@
     - name: file creation
       digital_ocean:
         name: "{{ item }}"
-        state: touch
+        state: present
       loop:
         - file3.txt
         - file4.txt
