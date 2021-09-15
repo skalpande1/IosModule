@@ -6,7 +6,7 @@
     - name: file creation
       file:
         path: "{{ item }}"
-        state: present
+        state: touch
       with_items:
         - file3.txt
         - file4.txt
