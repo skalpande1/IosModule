@@ -10,7 +10,10 @@
       with_items:
         - file3.txt
         - file4.txt
-    # - name: delete multiple files from location
-    #   file:
-    #     path:
-    #   state: absent
+    - name: delete multiple files from a location
+      file:
+         path: "{{ item }}"
+         state: absent
+      loop:
+        - file3.txt
+        - file2.txt
