@@ -1,0 +1,6 @@
+[webserver]
+172.31.47.230
+## localhost var1=inventory local_var=5
+
+[local]
+localhost
