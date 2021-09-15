@@ -4,10 +4,10 @@
   become: yes
   tasks:
     - name: file creation
-      digital_ocean:
-        name: "{{ item }}"
+      file:
+        path: "{{ item }}"
         state: present
-      loop:
+      with_items:
         - file3.txt
         - file4.txt
     # - name: delete multiple files from location
