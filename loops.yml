@@ -4,8 +4,8 @@
   become: yes
   tasks:
     - name: file creation
-      file:
-        path: "{{ item | default(5) }}"
+      digital_ocean:
+        name: "{{ item }}"
         state: present
         loop:
         - file3.txt
